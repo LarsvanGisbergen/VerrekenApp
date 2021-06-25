@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExpenseFormComponent implements OnInit {
 
+  name!: string;
+  amount!: number; 
+  
   constructor() { }
 
   ngOnInit(): void {
