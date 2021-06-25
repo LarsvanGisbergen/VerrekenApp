@@ -19,7 +19,7 @@ export class MonetaryService {
     return true;
   }
 
-  getBills(): Observable<Bill[]> {
+   getBills(): Observable<Bill[]> {
     return of(this.bills);
   }
   

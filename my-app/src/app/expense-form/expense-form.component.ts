@@ -1,4 +1,6 @@
+import { stringify } from '@angular/compiler/src/util';
 import { Component, OnInit } from '@angular/core';
+import { MonetaryService } from '../monetary/monetary.service';
 
 @Component({
   selector: 'app-expense-form',
@@ -7,12 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExpenseFormComponent implements OnInit {
 
-  name!: string;
-  amount!: number; 
   
-  constructor() { }
+
+  constructor(private mService: MonetaryService ) { 
+
+
+  }
 
   ngOnInit(): void {
+  }
+
+  //returns true if values are valid to be saved
+  onSave(name:string, amount:number): boolean{ 
+    if(name != "" || amount <= 0) return false;      
+    this.mService.addBill(name, amount);
+    return true;
   }
 
 }
