@@ -10,7 +10,10 @@ export class MonetaryService {
   bills: Bill[] = []
   payments: Payment[] = []
 
-  constructor() { }
+  constructor() {    
+    alert("MonetaryService ctor called");
+    
+  }
 
   //returns true if bill was added succesfully
   addBill(name: string, amount: number): boolean{
