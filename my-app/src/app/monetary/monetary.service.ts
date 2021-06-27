@@ -11,14 +11,19 @@ export class MonetaryService {
   payments: Payment[] = []
 
   constructor() {    
-    alert("MonetaryService ctor called");
-    
+    console.log("MonetaryService initialized");
   }
 
   //returns true if bill was added succesfully
   addBill(name: string, amount: number): boolean{
     let bill:Bill = new Bill(name, amount);
-    try{this.bills.push(bill);}catch{return false;}    
+    try{
+      this.bills.push(bill);
+      console.log("name: " + bill.name + " amount: " + bill.amount + " succesfully added to service");
+    }
+    catch{
+      return false;
+    }    
     return true;
   }
 

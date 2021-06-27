@@ -1,22 +1,29 @@
 
 
-
-<mat-card class="card">
-    <mat-card-title>
-        Hoe heet je?
-    </mat-card-title>
-    <label for="fname">naam: </label>
-    <input type="text" id="name" name="name"><br><br>    
-</mat-card>
-
-
-<mat-card class="card">
-    <mat-card-title>
-        Hoeveel heb je uitgegeven?
-    </mat-card-title>
-    <label for="fname">hoeveelheid: </label>
-    <input type="text" id="hoeveelheid" amount="hoeveelheid"><br><br>
+<div>
+    <mat-form-field appearance='fill' class="input-field">
+        <mat-label>Naam</mat-label>
+        <input matInput type="text" [formControl]='nameControl' required>
+        
+        
+        <mat-error *ngIf="nameControl.invalid">Naam mag niet leeg zijn</mat-error>
+        
+    </mat-form-field>
     
-</mat-card>
+</div>
+<br><br><br>
+<div>
+    <mat-form-field class="input-field">
+        
+        <input matInput type="number" [formControl]='amountControl' required>
+        <span matPrefix>€&nbsp;</span>
+        <mat-error *ngIf="amountControl.invalid">Inleg mag niet leeg of lager dan 0.01 zijn</mat-error>
+    </mat-form-field>
+    <br><br><br>
+</div>
 
-<input type="submit" value="opslaan" onclick="onSave({name},{amount})">
+
+
+<div>
+    <button mat-stroked-button color="primary" (click)="onSave()">Toevoegen</button>
+</div>

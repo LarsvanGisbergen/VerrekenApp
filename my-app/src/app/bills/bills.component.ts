@@ -12,7 +12,7 @@ export class BillsComponent implements OnInit {
   constructor(public mService: MonetaryService) { 
     
   }
-  displayedColumns: string[] = ['name', 'amount'];
+  displayedColumns: string[] = ['naam', 'bedrag'];
   ngOnInit(): void {
     
   }
