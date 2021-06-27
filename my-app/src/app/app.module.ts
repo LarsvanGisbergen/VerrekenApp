@@ -12,6 +12,9 @@ import { MatTableModule} from '@angular/material/table'
 import { MonetaryService } from './monetary/monetary.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WhopayswhoComponent } from './whopayswho/whopayswho.component';
+import {MatButtonModule} from '@angular/material/button';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +31,8 @@ import { WhopayswhoComponent } from './whopayswho/whopayswho.component';
     MatTableModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule 
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [MonetaryService],
   bootstrap: [AppComponent]

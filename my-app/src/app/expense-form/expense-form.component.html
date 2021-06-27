@@ -2,9 +2,9 @@
 
 <div>
     <mat-form-field appearance='fill' class="input-field">
-        <mat-label>Naam</mat-label>
-        <input matInput type="text" [formControl]='nameControl' required>
         
+        <input matInput type="text" [formControl]='nameControl' required>
+        <span matPrefix>Naam:&nbsp;</span>
         
         <mat-error *ngIf="nameControl.invalid">Naam mag niet leeg zijn</mat-error>
         
@@ -17,7 +17,7 @@
         
         <input matInput type="number" [formControl]='amountControl' required>
         <span matPrefix>€&nbsp;</span>
-        <mat-error *ngIf="amountControl.invalid">Inleg mag niet leeg of lager dan 0.01 zijn</mat-error>
+        <mat-error *ngIf="amountControl.invalid">Inleg moet minimaal €0.01 zijn</mat-error>
     </mat-form-field>
     <br><br><br>
 </div>
