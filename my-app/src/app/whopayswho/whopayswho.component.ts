@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MonetaryService } from '../monetary/monetary.service';
 
 @Component({
   selector: 'app-whopayswho',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WhopayswhoComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(public mService: MonetaryService) { }
+  
+  displayedColumns: string[] = ['Betaler', 'Bedrag', 'Ontvanger'];
   ngOnInit(): void {
   }
 

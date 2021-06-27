@@ -1,1 +1,18 @@
-<p>whopayswho works!</p>
+<table mat-table [dataSource]="this.mService.getPayments()" class="table">
+    <ng-container matColumnDef="Betaler">
+        <th mat-header-cell *matHeaderCellDef> Betaler </th>
+        <td mat-cell *matCellDef="let payment"> {{payment.name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Bedrag">
+        <th mat-header-cell *matHeaderCellDef> Hoeveelheid </th>
+        <td mat-cell *matCellDef="let payment"> € {{payment.amount | number:'.2'}} </td>
+    </ng-container> 
+    <ng-container matColumnDef="Ontvanger">
+        <th mat-header-cell *matHeaderCellDef> Ontvanger </th>
+        <td mat-cell *matCellDef="let payment"> {{payment.name_receiver}} </td>
+    </ng-container> 
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
