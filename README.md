@@ -2,7 +2,10 @@
 Eindopdracht Internet Technologie
 
 Voorbeeld webpagina:
-![alt text](my-app\src\images\verrekenapp1.png)
+![Webpagina](verrekenapp1.png)
 
 Voorbeeld UI theme en validator feedback:
-![alt text](my-app\src\images\verrekenapp2.png)
+![Theme&Validator](verrekenapp2.png)
+
+Voor de uitgewerkte test-cases van de applicatie zie:
+TestcasesInternetTech.xlsx (in de projectstructuur).
